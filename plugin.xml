@@ -20,15 +20,15 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="cordova-plugin-media"
+    id="cordova-plugin-media-nomic"
     version="5.0.4-dev">
 
     <name>Media</name>
     <description>Cordova Media Plugin</description>
     <license>Apache 2.0</license>
     <keywords>cordova,media</keywords>
-    <repo>https://github.com/apache/cordova-plugin-media</repo>
-    <issue>https://github.com/apache/cordova-plugin-media/issues</issue>
+    <repo>https://github.com/albertogreco/cordova-plugin-media-nomic</repo>
+    <issue>https://github.com/albertogreco/cordova-plugin-media-nomic/issues</issue>
 
     <engines>
         <engine name="cordova-android" version=">=6.3.0" />
@@ -48,7 +48,7 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="Media" >
-                <param name="android-package" value="org.apache.cordova.media.AudioHandler"/>
+                <param name="android-package" value="org.dealoegrecoinformatica.cordova.media.AudioHandler"/>
             </feature>
         </config-file>
 
@@ -59,9 +59,9 @@
             <uses-permission android:name="android.permission.READ_PHONE_STATE" />
         </config-file>
 
-        <source-file src="src/android/AudioHandler.java" target-dir="src/org/apache/cordova/media" />
-        <source-file src="src/android/AudioPlayer.java" target-dir="src/org/apache/cordova/media" />
-        <source-file src="src/android/FileHelper.java" target-dir="src/org/apache/cordova/media" />
+        <source-file src="src/android/AudioHandler.java" target-dir="src/org/dealoegrecoinformatica/cordova/media" />
+        <source-file src="src/android/AudioPlayer.java" target-dir="src/org/dealoegrecoinformatica/cordova/media" />
+        <source-file src="src/android/FileHelper.java" target-dir="src/org/dealoegrecoinformatica/cordova/media" />
     </platform>
 
     <!-- ios -->
