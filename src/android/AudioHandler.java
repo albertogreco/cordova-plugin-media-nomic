@@ -63,7 +63,7 @@ public class AudioHandler extends CordovaPlugin {
     private CallbackContext messageChannel;
 
 
-    public static String [] permissions = { Manifest.permission.RECORD_AUDIO, Manifest.permission.WRITE_EXTERNAL_STORAGE};
+    public static String [] permissions = { Manifest.permission.WRITE_EXTERNAL_STORAGE};
     public static int RECORD_AUDIO = 0;
     public static int WRITE_EXTERNAL_STORAGE = 1;
 
@@ -283,8 +283,8 @@ public class AudioHandler extends CordovaPlugin {
      * @param file				The name of the file
      */
     public void startRecordingAudio(String id, String file) {
-        AudioPlayer audio = getOrCreatePlayer(id, file);
-        audio.startRecording(file);
+        // AudioPlayer audio = getOrCreatePlayer(id, file);
+        // audio.startRecording(file);
     }
 
     /**
@@ -538,8 +538,8 @@ public class AudioHandler extends CordovaPlugin {
 
     private void promptForRecord()
     {
-        if(PermissionHelper.hasPermission(this, permissions[WRITE_EXTERNAL_STORAGE])  &&
-                PermissionHelper.hasPermission(this, permissions[RECORD_AUDIO])) {
+           /*
+        if(PermissionHelper.hasPermission(this, permissions[WRITE_EXTERNAL_STORAGE])) {
             this.startRecordingAudio(recordId, FileHelper.stripFileProtocol(fileUriStr));
         }
         else if(PermissionHelper.hasPermission(this, permissions[RECORD_AUDIO]))
@@ -550,7 +550,7 @@ public class AudioHandler extends CordovaPlugin {
         {
             getMicPermission(RECORD_AUDIO);
         }
-
+             */
     }
 
     /**
