@@ -150,6 +150,7 @@ public class AudioPlayer implements OnCompletionListener, OnPreparedListener, On
             sendErrorStatus(MEDIA_ERR_ABORTED);
             break;
         case NONE:
+              /*
             this.audioFile = file;
             this.recorder = new MediaRecorder();
             this.recorder.setAudioSource(MediaRecorder.AudioSource.MIC);
@@ -166,8 +167,9 @@ public class AudioPlayer implements OnCompletionListener, OnPreparedListener, On
                 e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
-            }
+            } */
 
+            LOG.d(LOG_TAG, "AudioPlayer Error: Recording not permitted.");
             sendErrorStatus(MEDIA_ERR_ABORTED);
             break;
         case RECORD:
